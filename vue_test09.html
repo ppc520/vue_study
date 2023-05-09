@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div id="ppc">
+            <input type="button" value="获取请求" v-on:click="getReq">
+            <h4>{{message}}</h4>
+        </div>
+
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let ppc=new Vue({
+            el:"#ppc",
+            data:{
+                message:"ppc520"
+            },
+            methods:{
+                getReq:function(){
+                    let that=this;
+                    let 请求地址="https://autumnfish.cn/api/joke";
+                    axios.get(请求地址).then((response)=>{
+                        that.message=response.data
+                    })
+                    // 以下同理
+                    // axios.get(请求地址).then(function(response){
+                    //     that.message=response.data
+                    // })
+                    
+                }
+            }
+            
+
+        })
+    </script>
+</html>
