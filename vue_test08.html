@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div id="ppc">
+            <input type="text" v-model="message" v-on:keyup.enter="getMessage">
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let ppc=new Vue({
+            el:"#ppc",
+            data:{
+                message:"ppc我爱你"
+            },
+            methods:{
+                getMessage:function(){
+                    alert(this.message)
+                }
+            }
+        })
+    </script>
+</html>
