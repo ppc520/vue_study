@@ -13,7 +13,7 @@
 
 <body>
     <div id="ppc">
-        <img v-bind:src="imgsrc" title="imgTitle" v-bind:class="{active:isActive}" @click="changeActive">
+        <img v-bind:src="imgsrc" :title="imgTitle" v-bind:class="{active:isActive}" @click="changeActive">
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
