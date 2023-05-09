@@ -11,7 +11,7 @@
         <button v-on:click="afterClick">v-on指令</button>
         <button @click="afterClick">v-on简写命令</button>
         <button @dblclick="afterDoubleClick">双击简写命令</button>
-        <h2 @click="changeData">{{message}}</h2>
+        <h2 @click="changeData" v-text="message"></h2>
     </div>
 
 </body>
