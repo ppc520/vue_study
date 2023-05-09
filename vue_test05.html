@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active {
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ppc">
+        <img v-bind:src="imgsrc" title="imgTitle" v-bind:class="{active:isActive}" @click="changeActive">
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+<script>
+    let ppc = new Vue({
+        el: "#ppc",
+        data: {
+            imgsrc: "./meinv.jpg",
+            imgTitle: "这是一个美女",
+            isActive: false
+        },
+        methods: {
+            changeActive: function () {
+                this.isActive = !this.isActive
+            }
+        }
+    })
+</script>
+
+</html>
