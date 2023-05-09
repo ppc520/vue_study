@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="ppc">
+        <ul v-for="(item,index) in list">
+            <li>{{index+1}}-{{item}}</li>
+        </ul>
+
+        <h2 v-for="item in listMap">
+            {{item.key1}}{{item.key2}}
+        </h2>
+        <button @click="addLeft">add left</button>
+        <button @click="removeLeft">remove left</button>
+        <button @click="addRight">add right</button>
+        <button @click="removeRight">remove right</button>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let ppc = new Vue({
+        el: "#ppc",
+        data: {
+            list: ["ppc1", "ppc2", "ppc3"],
+            listMap: [{ key1: "v1", key2: "v2" }, { key1: "v1", key2: "v2" }, { key1: "value1", key2: "value2" }]
+        },
+        methods:{
+            addRight:function(){
+                this.listMap.push({key1:"ppc",key2:"520"})
+            },
+            removeRight:function(){
+                this.listMap.pop()
+            },
+            addLeft:function(){
+                this.listMap.unshift({key1:"ppc",key2:"520"})
+            },
+            removeLeft:function(){
+                this.listMap.shift()
+            }
+        }
+
+    })
+</script>
+
+</html>
