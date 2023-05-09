@@ -6,9 +6,21 @@
     </head>
     <body>
 
+            <div id="ppc">
+                    <h2 v-text="message+':'"></h2>
+                    <h2 v-text="info+'!'"></h2>
+                    <h2>{{message+"5555"}}</h2>
+            </div>
+
     </body>
     <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
     <script>
-        
+        var ppc=new Vue({
+            el:"#ppc",
+            data:{
+                message:"ppc520",
+                info:"可真帅"
+            }
+        })
     </script>
 </html>
