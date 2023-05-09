@@ -10,8 +10,11 @@
     <div id="ppc">
         <input type="button" @click="changeShow" value="changeShow"></input>
         <input type="button" @click="addAge" value="加一岁">
-        <img v-show="Show" src="./meinv.jpg">
-        <img v-show="age>=18" src="./meinv.jpg">
+        <!-- <img v-show="Show" src="./meinv.jpg">
+        <img v-show="age>=18" src="./meinv.jpg"> -->
+
+        <img v-if="Show" src="./meinv.jpg">
+        <img v-if="age>=18" src="./meinv.jpg">
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
