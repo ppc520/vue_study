@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="ppc">
+        <input type="button" value="传参" v-on:click="传参(111,222,333)">
+        <input type="text" value="按下enter弹窗" v-on:keyup.enter="alert('ppc520')">
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let ppc=new Vue({
+        el:"#ppc",
+        methods:{
+            传参:function(param1,param2,param3){
+                console.log(param1,param2,param3)
+            },
+            alert:function(param){
+                alert(param)
+            }
+        }
+    })
+    
+</script>
+</html>
